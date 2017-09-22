@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Utils</string>
+    <string name="network_err">网络出现异常，请查看网络。</string>
+</resources>
