@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="https://a.alipayobjects.com/g/antui/antui/10.0.18/dpl/antui.css"/>
+    <title></title>
+    <style>
+    body{
+      padding: 10px;
+    }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<a href="action=CGBABORT&CGBBACK=true">
+    <button type="button" class="am-button" id="J_Save">点我跳转到度娘！</button>
+</a>
+<script>
+
+
+
+function ready(callback) {
+  if (window.AlipayJSBridge) {
+    callback && callback();
+  } else {
+    document.addEventListener('AlipayJSBridgeReady', callback, false);
+  }
+}
+
+ready(function() {
+  AlipayJSBridge.call("TAG", {
+key: 'TAG'
+}, function(result) {
+console.log(result.status);
+});
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>
+
+
